@@ -29,7 +29,9 @@ customer.csv
 - created_at (the date the customer signed up)
 - is_premier (whether or not the customer is on a 'premier' plan - these customers leave slightly higher scores
 - is_spam (whether or not the customer has been identified as a spam account. Spam accounts always leave ratings of 0)
-scores.csv
+
+
+score.csv
 ----------
 - id (a primary key)
 - customer_id - the relevant id from customer.csv to show which customer left this score
