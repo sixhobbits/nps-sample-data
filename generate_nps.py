@@ -24,7 +24,7 @@ DATE_END = datetime(2018,12,31)
 GLOBAL_CUSTOMER_ID = 0  # to fake database IDs / primary keys
 
 # average new customers joining per day, jan-dec
-num_new_customers = [10, 50, 100, 150, 200, 300, 400, 600, 1000, 1300, 2000, 3000]
+num_new_customers = [10, 50, 100, 150, 200, 300, 400, 600, 650, 700, 1000, 2000]
 
 # in bad months, customers are more likely to leave lower scores
 # in good months, customers are more likely to leave higher scores
@@ -120,7 +120,7 @@ def main():
             f.write("{},{},{},{}\n".format(customer.id+1, customer.created_at, customer.is_premier, customer.is_spam))
 
             
-    with open("scores.csv", "w") as f:
+    with open("score.csv", "w") as f:
         f.write("id,customer_id,created_at,score\n")
         for i, score in enumerate(scores):
             f.write("{},{},{},{}\n".format(i+1, score[0]+1, score[1], score[2]))
